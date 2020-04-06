@@ -1,6 +1,6 @@
 import numpy as np
 #Компьютер загадывает целое число от 1 до 100
-number = np.random.randint(1,100)
+number = np.random.randint(1,101)
 
 def game_v3(number):
     count = 0
@@ -12,9 +12,9 @@ def game_v3(number):
         if number == predict:
             break
         elif number > predict:
-            i = predict
+            i = predict+1
         elif number < predict:
-            j = predict
+            j = predict-1
     return(count)
 
 count1=game_v3(number)
